@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("api/users/getuser/100/lars,Olsen", function(result){
+            $.each(result, function(i, field){
+                $("table").append("<tr><td>" + field + "</tr></td>");
+            });
+            
+        });
+    });
+});
+</script>
+</head>
+
+
+
+    <body>
+        <div>TODO write content</div>
+        
+        <a href="api/users/getuser/100/lars,Olsen">Example of searching for lars olsen with data 100 (all fields returned.)</a>
+        <br>
+        <p>list of users: lars Olsen, b Olsen, se fs, c pip, d Olsen   </p>
+        
+ 
+        <br>
+        <button>Get JSON data...</button>
+        <table></table>
+        
+        
+        <hr>
+        
+        
+
+
+                
+    </body>
+
+
+</html>
